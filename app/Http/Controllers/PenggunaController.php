@@ -11,8 +11,7 @@ use App\Models\User;
 class PenggunaController extends Controller
 {
     public function index(){
-        $data['users'] = User::all();
-        return view('pentadbir.pengguna.index', $data);
+        return view('pentadbir.pengguna.index');
     }
 
     public function ajaxAll(Request $req){

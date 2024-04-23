@@ -60,16 +60,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($users as $user)
-                                    <tr>
-                                        <td>{{ $user->id }}</td>
-                                        <td>{{ $user->name }}</td>
-                                        <td>{{ $user->email }}</td>
-                                        <td>{{ $user->role }}</td>
-                                        <td>{{ $user->status }}</td>
-                                        <td></td>
-                                    </tr>
-                                    @endforeach
+    
                                 </tbody>
                             </table>
                         </div>
@@ -215,7 +206,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "post",
-            url: "/kkm-utilitiv3/public/pentadbir/pengguna/ajax-all",
+            url: "/pentadbir/pengguna/ajax-all",
             data:{
                     carian_type:carian_type,
                     carian_text:carian_text
@@ -259,7 +250,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "/kkm-utilitiv3/public/pentadbir/pengguna/simpan",
+            url: "/pentadbir/pengguna/simpan",
             data: data,
             dataType: "json",
             success: function (response) {
@@ -291,7 +282,7 @@ $(document).ready(function () {
         $('#EditUserModal').modal('show');
         $.ajax({
             type: "GET",
-            url: "/kkm-utilitiv3/public/pentadbir/pengguna/ubah/" + user_id,
+            url: "/pentadbir/pengguna/ubah/" + user_id,
             success: function (response) {
                 if (response.status == 404) {
                     $('#success_message').addClass('alert alert-success');
@@ -333,7 +324,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "/kkm-utilitiv3/public/pentadbir/pengguna/kemaskini",
+            url: "/pentadbir/pengguna/kemaskini",
             data: edit_data,
             dataType: "json",
             success: function (response) {
@@ -379,7 +370,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "GET",
-            url: "/kkm-utilitiv3/public/pentadbir/pengguna/setpass/" + id,
+            url: "/pentadbir/pengguna/setpass/" + id,
             dataType: "json",
             success: function (response) {
                 // console.log(response);

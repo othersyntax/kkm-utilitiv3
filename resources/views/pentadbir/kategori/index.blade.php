@@ -189,7 +189,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "post",
-            url: "/kkm-utilitiv3/public/pentadbir/kategori/ajax-all",
+            url: "/pentadbir/kategori/ajax-all",
             data:{
                     carian_type:carian_type,
                     carian_text:carian_text
@@ -230,7 +230,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "/kkm-utilitiv3/public/pentadbir/kategori/simpan",
+            url: "/pentadbir/kategori/simpan",
             data: data,
             dataType: "json",
             success: function (response) {
@@ -260,7 +260,7 @@ $(document).ready(function () {
         $('#EditKategoriModal').modal('show');
         $.ajax({
             type: "GET",
-            url: "/kkm-utilitiv3/public/pentadbir/kategori/ubah/" + faskat_id,
+            url: "/pentadbir/kategori/ubah/" + faskat_id,
             success: function (response) {
                 if (response.status == 404){
                     $('#success_message').addClass('alert alert-success');
@@ -299,7 +299,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "/kkm-utilitiv3/public/pentadbir/kategori/kemaskini",
+            url: "/pentadbir/kategori/kemaskini",
             data: edit_data,
             dataType: "json",
             success: function (response) {
@@ -345,7 +345,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "DELETE",
-            url: "/kkm-utilitiv3/public/pentadbir/kategori/padam/" + id,
+            url: "/pentadbir/kategori/padam/" + id,
             dataType: "json",
             success: function (response) {
                 // console.log(response);

@@ -11,7 +11,7 @@
             <div class="card-body">
                 <div class="card card-purple card-outline">
                     <div class="card-body">
-                        <form action="/kkm-utilitiv3/public/pentadbir/data/simpan" method="post" enctype="multipart/form-data">
+                        <form action="/pentadbir/data/simpan" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
