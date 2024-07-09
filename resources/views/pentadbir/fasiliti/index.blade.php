@@ -194,7 +194,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "post",
-            url: "/kkm-utilitiv3/public/pentadbir/fasiliti/ajax-all",
+            url: "/pentadbir/fasiliti/ajax-all",
             data:{
                     carian_type:carian_type,
                     carian_text:carian_text
@@ -237,7 +237,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "/kkm-utilitiv3/public/pentadbir/fasiliti/simpan",
+            url: "/pentadbir/fasiliti/simpan",
             data: data,
             dataType: "json",
             success: function (response) {
@@ -269,7 +269,7 @@ $(document).ready(function () {
         $('#EditFasilitiModal').modal('show');
         $.ajax({
             type: "GET",
-            url: "/kkm-utilitiv3/public/pentadbir/fasiliti/ubah/" + fasiliti_id,
+            url: "/pentadbir/fasiliti/ubah/" + fasiliti_id,
             success: function (response) {
                 if (response.status == 404){
                     $('#success_message').addClass('alert alert-success');
@@ -310,7 +310,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "/kkm-utilitiv3/public/pentadbir/fasiliti/kemaskini",
+            url: "/pentadbir/fasiliti/kemaskini",
             data: edit_data,
             dataType: "json",
             success: function (response) {
@@ -356,7 +356,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "DELETE",
-            url: "/kkm-utilitiv3/public/pentadbir/fasiliti/padam/" + id,
+            url: "/pentadbir/fasiliti/padam/" + id,
             dataType: "json",
             success: function (response) {
                 // console.log(response);
